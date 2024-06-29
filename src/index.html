@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile Screen</title>
+<link rel="stylesheet" href="styles.css">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWB3s3s3zd4lUq0B4ydfKUOj+u5z5l5Nlg+Gi5SH5lYu5f1cOjRHO2ad8Dx" crossorigin="anonymous">
+</head>
+<body>
+  
+<div class="container">
+    <div class ="Row">
+        <div class="header-menu">
+        <button id="exportJson">Export JSON</button>
+        <button id="exportDart">Export Dart</button>
+        <button id="viewCode">View Code</button>
+    </div>
+  
+    <div class="content">
+        <div class="side-menu">
+            <button id="addPage">+</button>
+            <div id="pageList"></div>
+        </div>
+   
+        <div class="left-menu">
+            <h3>Design Elements</h3>
+            <ul>
+
+                <li>
+                    <button class="dropdown-btn">Layout
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#2196F3" d="M7 10l5 5 5-5z"/></svg>
+                    </button>
+                    <div class="dropdown-container">
+                        <a class="draggable" draggable="true" id="element1_1" data-type="Container">
+                            <svg class="icon" xmlns="https://cdn-icons-png.flaticon.com/512/2312/2312798.png" viewBox="0 0 24 24"><path fill="#2196F3" d="M3 3h18v18H3z"/></svg>
+                            Container
+                        </a>
+                        <a class="draggable" draggable="true" id="element1_2" data-type="Row">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#2196F3" d="M3 3h18v6H3z"/></svg>
+                            Row
+                        </a>
+                        <a class="draggable" draggable="true" id="element1_3" data-type="Column">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#2196F3" d="M3 3h6v18H3z"/></svg>
+                            Column
+                        </a>
+                        <a class="draggable" draggable="true" id="element1_4" data-type="Stack">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#2196F3" d="M3 3h18v6H3z"/></svg>
+                            Stack
+                        </a>
+                        <a class="draggable" draggable="true" id="element1_5" data-type="Listview">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#2196F3" d="M3 3h18v6H3z"/></svg>
+                            Listview
+                        </a>
+                        <a class="draggable" draggable="true" id="element1_6" data-type="Gridview">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#2196F3" d="M3 3h18v6H3z"/></svg>
+                            Gridview
+                        </a>
+                        <a class="draggable" draggable="true" id="element1_7" data-type="ScrolHorizontal">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#2196F3" d="M3 3h18v6H3z"/></svg>
+                            Scrol Horizontal
+                        </a>
+                        <a class="draggable" draggable="true" id="element1_8" data-type="ScrolVertical">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#2196F3" d="M3 3h18v6H3z"/></svg>
+                            Scrol Vertical
+                        </a>
+                        <a class="draggable" draggable="true" id="element1_9" data-type="SingleChaild">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#2196F3" d="M3 3h18v6H3z"/></svg>
+                            Single Chaild View
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <button class="dropdown-btn">Button
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#2196F3" d="M7 10l5 5 5-5z"/></svg>
+                    </button>
+                    <div class="dropdown-container">
+                        <a href="#" class="draggable" draggable="true" id="element2_1" data-type="dropdown_but">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#2196F3" d="M3 3h18v6H3z"/></svg>
+                            dropdown Button
+                        </a>
+                        <a href="#" class="draggable" draggable="true" id="element2_2" data-type="Elevated_but">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#2196F3" d="M3 3h18v6H3z"/></svg>
+                            Elevated Button
+                        </a>
+                        <a href="#" class="draggable" draggable="true" id="element2_3" data-type="Text_but">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#2196F3" d="M3 3h18v6H3z"/></svg>
+                            Text Button
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <button class="dropdown-btn">Text and Media
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#2196F3" d="M7 10l5 5 5-5z"/></svg>
+                    </button>
+                    <div class="dropdown-container">
+                        <a class="draggable" draggable="true" id="element3_1" data-type="Text">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#2196F3" d="M3 3h18v6H3z"/></svg>
+                            Text
+                        </a>
+                        <a class="draggable" draggable="true" id="element3_2" data-type="Text_Field">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#2196F3" d="M3 3h18v6H3z"/></svg>
+                            Text Field
+                        </a>
+                        <a class="draggable" draggable="true" id="element3_3" data-type="Rich_Text">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#2196F3" d="M3 3h18v6H3z"/></svg>
+                            Rich Text
+                        </a>
+                        <a class="draggable" draggable="true" id="element3_4" data-type="Image">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#2196F3" d="M3 3h18v6H3z"/></svg>
+                            Image
+                        </a>
+                        <a class="draggable" draggable="true" id="element3_5" data-type="Video_Player">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#2196F3" d="M3 3h18v6H3z"/></svg>
+                            Video Player
+                        </a>
+                    </div>
+                </li>
+            </ul>
+
+        </div>  
+      <div class="mobile">
+          
+            <div class="status-bar">
+                <span>10:00 AM</span>
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#2196F3" d="M7 10l5 5 5-5z"/></svg>
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#2196F3" d="M3 3h18v2H3z m0 4h18v2H3z m0 4h18v2H3z"/></svg>
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#2196F3" d="M21 12l-4.5-6H3v12h13.5L21 12zM3 8V6h8.5L13 8H3zm8.5 7H3v-2h8.5l1.5 2zm7.5-4v2h-4.5l-1.5-2H21z"/></svg>
+                <button id="deleteButton">حذف</button>
+            
+            </div>
+            
+            <div class="screen" id="container">
+                
+            </div>
+            <div class="navigation">
+                <button id="prevPage">Previous</button>
+                <span id="currentPage">1</span> / <span id="totalPages">1</span>
+                <button id="nextPage">Next</button>
+            </div>
+        
+
+        
+        </div>
+
+        
+        <div id="container" class="container"></div>    
+   
+        
+
+    </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<script src="widget_drag.js"></script>
+<script src="DesignTree.js"></script>
+<script src="json-expo.js"></script>
+<script src="code-expo.js"></script>
+<link rel="stylesheet" href="style.css">
+
+</body>
+</html>
